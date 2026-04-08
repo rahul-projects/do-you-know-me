@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
     game: document.getElementById('gameScreen'),
     result: document.getElementById('resultScreen')
   };
-
+  
   const levelGrid = document.getElementById('levelGrid');
   const currentLevelTitle = document.getElementById('currentLevelTitle');
   const clueText = document.getElementById('clueText');
@@ -13,12 +13,13 @@ document.addEventListener('DOMContentLoaded', () => {
   const nextClueBtn = document.getElementById('nextClueBtn');
   const attemptsCountSpan = document.getElementById('attemptsCount');
   const finalAnswerSpan = document.getElementById('finalAnswer');
-
+  
   const buttons = {
     back: document.getElementById('backBtn'),
     playAgain: document.getElementById('playAgainBtn'),
     home: document.getElementById('homeBtn'),
-    nextLevel: document.getElementById('nextLevelBtn')
+    nextLevel: document.getElementById('nextLevelBtn'),
+    nextPuzzle: document.getElementById('nextPuzzleBtn')
   };
 
   const sounds = {
@@ -29,9 +30,21 @@ document.addEventListener('DOMContentLoaded', () => {
   // Game State
   let unlockedLevels = parseInt(localStorage.getItem('knowme_unlocked')) || 1;
   let currentLevelId = null;
+  let levelQuestions = [];
+  let currentQuestionIndex = 0;
   let currentQuestion = null;
   let currentClueIndex = 0;
   let attempts = 0;
+
+  // Utility to shuffle an array
+  function shuffleArray(array) {
+    const arr = [...array];
+    for (let i = arr.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [arr[i], arr[j]] = [arr[j], arr[i]];
+    }
+    return arr;
+  }
 
   // Initialize Home Screen
   function initHome() {
@@ -39,13 +52,13 @@ document.addEventListener('DOMContentLoaded', () => {
     gameData.forEach(level => {
       const btn = document.createElement('button');
       const isLocked = level.id > unlockedLevels;
-
+      
       btn.className = `level-btn ${isLocked ? 'locked' : ''}`;
       btn.innerHTML = `
         <span style="font-size: 2rem; margin-bottom: 5px;">${isLocked ? '🔒' : '⭐'}</span>
         <span>${level.title.split(':')[0]}</span>
       `;
-
+      
       if (!isLocked) {
         btn.addEventListener('click', () => startGame(level.id));
       } else {
@@ -56,7 +69,7 @@ document.addEventListener('DOMContentLoaded', () => {
           setTimeout(() => btn.style.animation = '', 400);
         });
       }
-
+      
       levelGrid.appendChild(btn);
     });
   }
@@ -83,23 +96,34 @@ document.addEventListener('DOMContentLoaded', () => {
   function startGame(levelId) {
     currentLevelId = levelId;
     const levelData = gameData.find(l => l.id === levelId);
-    currentLevelTitle.textContent = levelData.title;
-
-    // Pick a random question from this level to allow replayability
-    const randomIndex = Math.floor(Math.random() * levelData.questions.length);
-    currentQuestion = levelData.questions[randomIndex];
-
-    currentClueIndex = 0;
-    attempts = 0;
-    updateAttemptsDisplay();
-
-    showQuestion();
+    
+    // Pick 3 random distinct questions from the level
+    const shuffledQuestions = shuffleArray(levelData.questions);
+    levelQuestions = shuffledQuestions.slice(0, 3);
+    currentQuestionIndex = 0;
+    
+    startPuzzle();
     showScreen('game');
   }
 
-  function showQuestion() {
-    clueText.textContent = currentQuestion.clues[currentClueIndex];
+  function startPuzzle() {
+    const levelData = gameData.find(l => l.id === currentLevelId);
+    currentLevelTitle.textContent = `${levelData.title} (${currentQuestionIndex + 1}/3)`;
+    currentQuestion = levelQuestions[currentQuestionIndex];
+    
+    currentClueIndex = 0;
+    attempts = 0;
+    updateAttemptsDisplay();
+    
+    showQuestion();
+  }
 
+  function showQuestion() {
+    // Shuffle the clues so they aren't always in the same order
+    // But keep the first clue consistently easy/hard based on logic? 
+    // Wait, let's keep clue order fixed as they usually go from hard to easy.
+    clueText.textContent = currentQuestion.clues[currentClueIndex];
+    
     // Manage Next Clue button visibility
     if (currentClueIndex < currentQuestion.clues.length - 1) {
       nextClueBtn.classList.remove('hidden');
@@ -109,14 +133,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Render options
     optionsGrid.innerHTML = '';
-    currentQuestion.options.forEach(option => {
+    // Shuffle options so they aren't always in the same position
+    const shuffledOptions = shuffleArray(currentQuestion.options);
+    shuffledOptions.forEach(option => {
       const btn = document.createElement('button');
       btn.className = 'option-btn';
       btn.innerHTML = `
         <span class="option-emoji">${option.emoji}</span>
         <span class="option-text">${option.text}</span>
       `;
-
+      
       btn.addEventListener('click', () => handleGuess(option, btn));
       optionsGrid.appendChild(btn);
     });
@@ -130,7 +156,7 @@ document.addEventListener('DOMContentLoaded', () => {
       // Correct!
       playSound('success');
       btnElement.classList.add('correct');
-
+      
       // Disable all other buttons
       Array.from(optionsGrid.children).forEach(child => {
         child.style.pointerEvents = 'none';
@@ -141,7 +167,7 @@ document.addEventListener('DOMContentLoaded', () => {
       // Wrong
       playSound('error');
       btnElement.classList.add('wrong');
-
+      
       // Automatically show next clue if available
       if (currentClueIndex < currentQuestion.clues.length - 1) {
         setTimeout(showNextClue, 500);
@@ -153,7 +179,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (currentClueIndex < currentQuestion.clues.length - 1) {
       currentClueIndex++;
       clueText.textContent = currentQuestion.clues[currentClueIndex];
-
+      
       if (currentClueIndex === currentQuestion.clues.length - 1) {
         nextClueBtn.classList.add('hidden');
       }
@@ -167,20 +193,26 @@ document.addEventListener('DOMContentLoaded', () => {
   function showResult(isSuccess) {
     if (isSuccess) {
       finalAnswerSpan.textContent = `${currentQuestion.answer} ${currentQuestion.options.find(o => o.text === currentQuestion.answer).emoji}`;
-
-      // Unlock next level logic
-      if (currentLevelId == unlockedLevels && unlockedLevels < gameData.length) {
-        unlockedLevels++;
-        localStorage.setItem('knowme_unlocked', unlockedLevels);
-      }
-
-      // Show/Hide Next Level button
-      if (currentLevelId < gameData.length) {
-        buttons.nextLevel.classList.remove('hidden');
+      
+      buttons.nextPuzzle.classList.add('hidden');
+      buttons.nextLevel.classList.add('hidden');
+      
+      if (currentQuestionIndex < levelQuestions.length - 1) {
+        // Not done with level yet
+        document.querySelector('.success-title').textContent = '🎉 Great Job! 🎉';
+        buttons.nextPuzzle.classList.remove('hidden');
       } else {
-        buttons.nextLevel.classList.add('hidden');
+        // Level complete
+        document.querySelector('.success-title').textContent = '🏆 Level Complete! 🏆';
+        if (currentLevelId == unlockedLevels && unlockedLevels < gameData.length) {
+          unlockedLevels++;
+          localStorage.setItem('knowme_unlocked', unlockedLevels);
+        }
+        if (currentLevelId < gameData.length) {
+          buttons.nextLevel.classList.remove('hidden');
+        }
       }
-
+      
       showScreen('result');
     }
   }
@@ -190,6 +222,11 @@ document.addEventListener('DOMContentLoaded', () => {
   buttons.home.addEventListener('click', () => showScreen('home'));
   buttons.playAgain.addEventListener('click', () => startGame(currentLevelId));
   buttons.nextLevel.addEventListener('click', () => startGame(currentLevelId + 1));
+  buttons.nextPuzzle.addEventListener('click', () => {
+    currentQuestionIndex++;
+    startPuzzle();
+    showScreen('game');
+  });
   nextClueBtn.addEventListener('click', showNextClue);
 
   // Start App

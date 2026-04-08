@@ -50,6 +50,38 @@ const gameData = [
           { text: "Carrot", emoji: "🥕" },
           { text: "Tomato", emoji: "🍅" }
         ]
+      },
+      {
+        id: "q1_4",
+        type: "guess",
+        clues: [
+          "I am sour and yellow.",
+          "You squeeze me to make juice.",
+          "I grow on trees."
+        ],
+        answer: "Lemon",
+        options: [
+          { text: "Lemon", emoji: "🍋" },
+          { text: "Orange", emoji: "🍊" },
+          { text: "Apple", emoji: "🍎" },
+          { text: "Pear", emoji: "🍐" }
+        ]
+      },
+      {
+        id: "q1_5",
+        type: "guess",
+        clues: [
+          "I look like a green tree.",
+          "I am very healthy.",
+          "You can steam or roast me."
+        ],
+        answer: "Broccoli",
+        options: [
+          { text: "Carrot", emoji: "🥕" },
+          { text: "Broccoli", emoji: "🥦" },
+          { text: "Cucumber", emoji: "🥒" },
+          { text: "Lettuce", emoji: "🥬" }
+        ]
       }
     ]
   },
@@ -103,6 +135,38 @@ const gameData = [
           { text: "Horse", emoji: "🐴" },
           { text: "Zebra", emoji: "🦓" },
           { text: "Tiger", emoji: "🐅" }
+        ]
+      },
+      {
+        id: "q2_4",
+        type: "guess",
+        clues: [
+          "I have a very long neck.",
+          "I eat leaves from tall trees.",
+          "I have spots all over."
+        ],
+        answer: "Giraffe",
+        options: [
+          { text: "Camel", emoji: "🐫" },
+          { text: "Elephant", emoji: "🐘" },
+          { text: "Giraffe", emoji: "🦒" },
+          { text: "Horse", emoji: "🐴" }
+        ]
+      },
+      {
+        id: "q2_5",
+        type: "guess",
+        clues: [
+          "I am the king of the jungle.",
+          "I have a big mane.",
+          "I roar very loudly!"
+        ],
+        answer: "Lion",
+        options: [
+          { text: "Tiger", emoji: "🐅" },
+          { text: "Bear", emoji: "🐻" },
+          { text: "Monkey", emoji: "🐒" },
+          { text: "Lion", emoji: "🦁" }
         ]
       }
     ]
@@ -158,6 +222,38 @@ const gameData = [
           { text: "Train", emoji: "🚂" },
           { text: "Truck", emoji: "🚚" }
         ]
+      },
+      {
+        id: "q3_4",
+        type: "guess",
+        clues: [
+          "I float on the water.",
+          "I have sails to catch the wind.",
+          "You ride me in the ocean."
+        ],
+        answer: "Boat",
+        options: [
+          { text: "Car", emoji: "🚗" },
+          { text: "Submarine", emoji: "🛶" },
+          { text: "Boat", emoji: "⛵" },
+          { text: "Aeroplane", emoji: "✈️" }
+        ]
+      },
+      {
+        id: "q3_5",
+        type: "guess",
+        clues: [
+          "I have two wheels.",
+          "You have to pedal to make me go.",
+          "Don't forget to wear a helmet!"
+        ],
+        answer: "Bicycle",
+        options: [
+          { text: "Scooter", emoji: "🛴" },
+          { text: "Bicycle", emoji: "🚲" },
+          { text: "Motorcycle", emoji: "🏍️" },
+          { text: "Skateboard", emoji: "🛹" }
+        ]
       }
     ]
   },
@@ -211,6 +307,38 @@ const gameData = [
           { text: "Zero", emoji: "0️⃣" },
           { text: "Eight", emoji: "8️⃣" },
           { text: "Nine", emoji: "9️⃣" }
+        ]
+      },
+      {
+        id: "q4_4",
+        type: "guess",
+        clues: [
+          "I am the first number of all.",
+          "If you have this many, you have nothing.",
+          "I look like a circle."
+        ],
+        answer: "Zero",
+        options: [
+          { text: "One", emoji: "1️⃣" },
+          { text: "Ten", emoji: "🔟" },
+          { text: "Zero", emoji: "0️⃣" },
+          { text: "Eight", emoji: "8️⃣" }
+        ]
+      },
+      {
+        id: "q4_5",
+        type: "guess",
+        clues: [
+          "I am the number of legs a spider has.",
+          "I come after seven.",
+          "Two times four."
+        ],
+        answer: "Eight",
+        options: [
+          { text: "Six", emoji: "6️⃣" },
+          { text: "Ten", emoji: "🔟" },
+          { text: "Eight", emoji: "8️⃣" },
+          { text: "Seven", emoji: "7️⃣" }
         ]
       }
     ]
@@ -266,6 +394,38 @@ const gameData = [
           { text: "Table", emoji: "🪚" },
           { text: "Bed", emoji: "🛏️" }
         ]
+      },
+      {
+        id: "q5_4",
+        type: "guess",
+        clues: [
+          "You sit on me in the living room.",
+          "I can fit more than one person.",
+          "I am soft and comfortable."
+        ],
+        answer: "Sofa",
+        options: [
+          { text: "Bed", emoji: "🛏️" },
+          { text: "Chair", emoji: "🪑" },
+          { text: "Sofa", emoji: "🛋️" },
+          { text: "Stool", emoji: "🪑" }
+        ]
+      },
+      {
+        id: "q5_5",
+        type: "guess",
+        clues: [
+          "You use me to clean your clothes.",
+          "I spin round and round.",
+          "You put soap in me."
+        ],
+        answer: "Washing Machine",
+        options: [
+          { text: "Dishwasher", emoji: "🍽️" },
+          { text: "Refrigerator", emoji: "🧊" },
+          { text: "Oven", emoji: "🍳" },
+          { text: "Washing Machine", emoji: "🧺" }
+        ]
       }
     ]
   },
@@ -319,6 +479,38 @@ const gameData = [
           { text: "Zoo", emoji: "🦁" },
           { text: "Circus", emoji: "🎪" },
           { text: "Library", emoji: "📚" }
+        ]
+      },
+      {
+        id: "q6_4",
+        type: "guess",
+        clues: [
+          "You go here when you are sick.",
+          "There are doctors and nurses here.",
+          "Sometimes you ride here in an ambulance."
+        ],
+        answer: "Hospital",
+        options: [
+          { text: "School", emoji: "🏫" },
+          { text: "Hospital", emoji: "🏥" },
+          { text: "Store", emoji: "🏪" },
+          { text: "Park", emoji: "🏞️" }
+        ]
+      },
+      {
+        id: "q6_5",
+        type: "guess",
+        clues: [
+          "It is full of books.",
+          "You must be very quiet here.",
+          "You can borrow things to read."
+        ],
+        answer: "Library",
+        options: [
+          { text: "School", emoji: "🏫" },
+          { text: "Library", emoji: "📚" },
+          { text: "Museum", emoji: "🖼️" },
+          { text: "Cinema", emoji: "🍿" }
         ]
       }
     ]
@@ -374,6 +566,38 @@ const gameData = [
           { text: "Circle", emoji: "🔵" },
           { text: "Diamond", emoji: "♦️" }
         ]
+      },
+      {
+        id: "q7_4",
+        type: "guess",
+        clues: [
+          "I am the color of the grass.",
+          "I am the color of a frog.",
+          "Yellow and blue make me."
+        ],
+        answer: "Green",
+        options: [
+          { text: "Red", emoji: "🔴" },
+          { text: "Blue", emoji: "🔵" },
+          { text: "Yellow", emoji: "🟡" },
+          { text: "Green", emoji: "🟢" }
+        ]
+      },
+      {
+        id: "q7_5",
+        type: "guess",
+        clues: [
+          "I have three sides.",
+          "I have three pointy corners.",
+          "I look like a slice of pizza."
+        ],
+        answer: "Triangle",
+        options: [
+          { text: "Circle", emoji: "🔵" },
+          { text: "Square", emoji: "🟥" },
+          { text: "Triangle", emoji: "🔺" },
+          { text: "Star", emoji: "⭐" }
+        ]
       }
     ]
   },
@@ -427,6 +651,38 @@ const gameData = [
           { text: "Donut", emoji: "🍩" },
           { text: "Birthday Cake", emoji: "🎂" },
           { text: "Pie", emoji: "🥧" }
+        ]
+      },
+      {
+        id: "q8_4",
+        type: "guess",
+        clues: [
+          "I have a hole in the middle.",
+          "I am fried dough.",
+          "Sometimes I have sprinkles."
+        ],
+        answer: "Donut",
+        options: [
+          { text: "Bagel", emoji: "🥯" },
+          { text: "Cookie", emoji: "🍪" },
+          { text: "Donut", emoji: "🍩" },
+          { text: "Croissant", emoji: "🥐" }
+        ]
+      },
+      {
+        id: "q8_5",
+        type: "guess",
+        clues: [
+          "I am cold and refreshing.",
+          "I am red on the inside, green outside.",
+          "I have black seeds."
+        ],
+        answer: "Watermelon",
+        options: [
+          { text: "Apple", emoji: "🍎" },
+          { text: "Strawberry", emoji: "🍓" },
+          { text: "Watermelon", emoji: "🍉" },
+          { text: "Cherry", emoji: "🍒" }
         ]
       }
     ]
@@ -482,6 +738,38 @@ const gameData = [
           { text: "Leg", emoji: "🦵" },
           { text: "Foot", emoji: "🦶" }
         ]
+      },
+      {
+        id: "q9_4",
+        type: "guess",
+        clues: [
+          "You use me to listen to music.",
+          "I am on the side of your head.",
+          "You have two of me."
+        ],
+        answer: "Ears",
+        options: [
+          { text: "Eyes", emoji: "👁️" },
+          { text: "Nose", emoji: "👃" },
+          { text: "Mouth", emoji: "👄" },
+          { text: "Ears", emoji: "👂" }
+        ]
+      },
+      {
+        id: "q9_5",
+        type: "guess",
+        clues: [
+          "You use me to hold things.",
+          "I have five fingers.",
+          "You use me to wave hello."
+        ],
+        answer: "Hand",
+        options: [
+          { text: "Foot", emoji: "🦶" },
+          { text: "Arm", emoji: "💪" },
+          { text: "Hand", emoji: "🖐️" },
+          { text: "Leg", emoji: "🦵" }
+        ]
       }
     ]
   },
@@ -535,6 +823,38 @@ const gameData = [
           { text: "Coat", emoji: "🧥" },
           { text: "Umbrella", emoji: "☂️" },
           { text: "Boots", emoji: "👢" }
+        ]
+      },
+      {
+        id: "q10_4",
+        type: "guess",
+        clues: [
+          "I fall from clouds in the winter.",
+          "I am white and cold.",
+          "Every flake of me is unique."
+        ],
+        answer: "Snow",
+        options: [
+          { text: "Rain", emoji: "🌧️" },
+          { text: "Snow", emoji: "❄️" },
+          { text: "Wind", emoji: "💨" },
+          { text: "Ice", emoji: "🧊" }
+        ]
+      },
+      {
+        id: "q10_5",
+        type: "guess",
+        clues: [
+          "I am an instrument with black and white keys.",
+          "You play me with your fingers.",
+          "I am very heavy."
+        ],
+        answer: "Piano",
+        options: [
+          { text: "Guitar", emoji: "🎸" },
+          { text: "Drum", emoji: "🥁" },
+          { text: "Violin", emoji: "🎻" },
+          { text: "Piano", emoji: "🎹" }
         ]
       }
     ]

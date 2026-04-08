@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="100%" height="100%">
+  <!-- Left arm -->
+  <path d="M 70 80 Q 30 50 20 60 Q 10 70 30 90 Z" fill="#222" />
+  <!-- Right arm -->
+  <path d="M 130 80 Q 170 50 180 60 Q 190 70 170 90 Z" fill="#222" />
+
+  <!-- Body -->
+  <ellipse cx="100" cy="100" rx="45" ry="50" fill="#FFFFFF" stroke="#222" stroke-width="3"/>
+  <ellipse cx="100" cy="105" rx="35" ry="40" fill="#f0f0f0" /> <!-- Belly shading -->
+
+  <!-- Left Leg (jumping/bent) -->
+  <path d="M 70 140 Q 50 190 40 180 Q 30 170 60 130 Z" fill="#222" />
+
+  <!-- Right Leg (Kicking High) -->
+  <path d="M 130 130 Q 180 100 190 80 Q 200 70 150 110 Z" fill="#222" />
+  <!-- Foot wrapping/Sandals -->
+  <ellipse cx="45" cy="180" rx="10" ry="15" fill="#deb887" transform="rotate(-30 45 180)" />
+  <ellipse cx="185" cy="85" rx="10" ry="15" fill="#deb887" transform="rotate(60 185 85)" />
+
+  <!-- Pants -->
+  <path d="M 60 120 Q 100 150 140 120 L 150 145 L 100 160 L 50 145 Z" fill="#a0522d" stroke="#222" stroke-width="2"/>
+
+  <!-- Red/Yellow Belt -->
+  <path d="M 55 120 Q 100 140 145 120 L 140 130 Q 100 150 60 130 Z" fill="#cc0000" />
+  <path d="M 60 125 Q 100 145 140 125" fill="none" stroke="#ffcc00" stroke-width="2" />
+
+  <!-- Belt tail -->
+  <path d="M 120 125 Q 130 160 140 180 Q 150 170 130 120 Z" fill="#cc0000" />
+
+  <!-- Head -->
+  <!-- Left Ear -->
+  <circle cx="70" cy="35" r="15" fill="#222" />
+  <!-- Right Ear -->
+  <circle cx="130" cy="35" r="15" fill="#222" />
+
+  <!-- Face -->
+  <circle cx="100" cy="55" r="35" fill="#FFFFFF" stroke="#222" stroke-width="3" />
+
+  <!-- Left Eye Patch -->
+  <ellipse cx="85" cy="50" rx="12" ry="18" fill="#222" transform="rotate(15 85 50)" />
+  <!-- Right Eye Patch -->
+  <ellipse cx="115" cy="50" rx="12" ry="18" fill="#222" transform="rotate(-15 115 50)" />
+
+  <!-- Eyes Inner -->
+  <circle cx="85" cy="48" r="4" fill="#FFFFFF" />
+  <circle cx="85" cy="48" r="1.5" fill="#000" />
+
+  <circle cx="115" cy="48" r="4" fill="#FFFFFF" />
+  <circle cx="115" cy="48" r="1.5" fill="#000" />
+
+  <!-- Nose -->
+  <path d="M 95 65 Q 100 70 105 65 Z" fill="#222" />
+
+  <!-- Mouth -->
+  <path d="M 85 75 Q 100 85 115 75" fill="none" stroke="#222" stroke-width="3" stroke-linecap="round" />
+</svg>

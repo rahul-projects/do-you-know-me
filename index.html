@@ -16,11 +16,11 @@
   <audio id="errorSound" src="https://assets.mixkit.co/active_storage/sfx/2955/2955-preview.mp3"></audio>
 
   <div class="app-container">
-
+    
     <!-- Home Screen -->
     <div id="homeScreen" class="screen active">
       <h1>🌟 Do You Know Me? 🌟</h1>
-      <div class="mascot">🦉</div>
+      <div class="mascot"><img src="kungfu-panda.svg" alt="Kung Fu Panda" width="180" height="180"></div>
       <p class="subtitle">A fun guessing game for smart kids!</p>
       <div id="levelGrid" class="level-grid">
         <!-- Level buttons will be injected here by app.js -->
@@ -36,7 +36,7 @@
       </div>
 
       <div class="game-area">
-        <div class="mascot-small">🦉</div>
+        <div class="mascot-small"><img src="kungfu-panda.svg" alt="Kung Fu Panda" width="120" height="120"></div>
         <div class="clue-box">
           <p id="clueText">Listen carefully...</p>
           <button id="nextClueBtn" class="action-btn hidden">Show Next Clue 💡</button>
@@ -51,12 +51,13 @@
     <!-- Result Screen -->
     <div id="resultScreen" class="screen hidden">
       <h1 class="success-title">🎉 You Did It! 🎉</h1>
-      <div class="mascot-large">🦉</div>
+      <div class="mascot-large"><img src="kungfu-panda.svg" alt="Kung Fu Panda" width="220" height="220"></div>
       <p class="answer-reveal">It was a <strong id="finalAnswer"></strong>!</p>
       <div class="result-actions">
-        <button id="playAgainBtn" class="action-btn primary">Play Again 🔄</button>
-        <button id="homeBtn" class="action-btn secondary">Home 🏠</button>
+        <button id="nextPuzzleBtn" class="action-btn success hidden">Next Puzzle ➡️</button>
         <button id="nextLevelBtn" class="action-btn success hidden">Next Level ➡️</button>
+        <button id="homeBtn" class="action-btn secondary">Home 🏠</button>
+        <button id="playAgainBtn" class="action-btn primary">Play Again 🔄</button>
       </div>
     </div>
 
