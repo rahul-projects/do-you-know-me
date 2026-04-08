@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Do You Know Me? - Kids Game</title>
+  <link rel="manifest" href="./manifest.json">
+  <link rel="stylesheet" href="style.css">
+  <meta name="theme-color" content="#FFB6C1">
+  <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Audio elements -->
+  <audio id="successSound" src="https://assets.mixkit.co/active_storage/sfx/2013/2013-preview.mp3"></audio>
+  <audio id="errorSound" src="https://assets.mixkit.co/active_storage/sfx/2955/2955-preview.mp3"></audio>
+
+  <div class="app-container">
+
+    <!-- Home Screen -->
+    <div id="homeScreen" class="screen active">
+      <h1>🌟 Do You Know Me? 🌟</h1>
+      <div class="mascot">🦉</div>
+      <p class="subtitle">A fun guessing game for smart kids!</p>
+      <div id="levelGrid" class="level-grid">
+        <!-- Level buttons will be injected here by app.js -->
+      </div>
+    </div>
+
+    <!-- Game Screen -->
+    <div id="gameScreen" class="screen hidden">
+      <div class="header">
+        <button id="backBtn" class="nav-btn">🔙 Back</button>
+        <h2 id="currentLevelTitle">Level 1</h2>
+        <div class="stars">Attempts: <span id="attemptsCount">0</span></div>
+      </div>
+
+      <div class="game-area">
+        <div class="mascot-small">🦉</div>
+        <div class="clue-box">
+          <p id="clueText">Listen carefully...</p>
+          <button id="nextClueBtn" class="action-btn hidden">Show Next Clue 💡</button>
+        </div>
+
+        <div id="optionsGrid" class="options-grid">
+          <!-- Options injected here -->
+        </div>
+      </div>
+    </div>
+
+    <!-- Result Screen -->
+    <div id="resultScreen" class="screen hidden">
+      <h1 class="success-title">🎉 You Did It! 🎉</h1>
+      <div class="mascot-large">🦉</div>
+      <p class="answer-reveal">It was a <strong id="finalAnswer"></strong>!</p>
+      <div class="result-actions">
+        <button id="playAgainBtn" class="action-btn primary">Play Again 🔄</button>
+        <button id="homeBtn" class="action-btn secondary">Home 🏠</button>
+        <button id="nextLevelBtn" class="action-btn success hidden">Next Level ➡️</button>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('./sw.js')
+        .then(() => console.log("Service Worker Registered"))
+        .catch(err => console.log("Service Worker Registration Failed", err));
+    }
+  </script>
+</body>
+</html>
