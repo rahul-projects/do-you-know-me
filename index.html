@@ -19,6 +19,9 @@
     
     <!-- Home Screen -->
     <div id="homeScreen" class="screen active">
+      <div style="position: absolute; top: 10px; right: 10px;">
+        <button id="parentalBtn" class="nav-btn" style="font-size: 2rem;">⚙️</button>
+      </div>
       <h1>🌟 Do You Know Me? 🌟</h1>
       <div class="mascot"><img src="kungfu-panda.svg" alt="Kung Fu Panda" width="180" height="180"></div>
       <p class="subtitle">A fun guessing game for smart kids!</p>
@@ -38,6 +41,7 @@
       <div class="game-area">
         <div class="mascot-small"><img src="kungfu-panda.svg" alt="Kung Fu Panda" width="120" height="120"></div>
         <div class="clue-box">
+          <p id="previousClueText" class="hidden">Previous clue...</p>
           <p id="clueText">Listen carefully...</p>
           <button id="nextClueBtn" class="action-btn hidden">Show Next Clue 💡</button>
         </div>
@@ -46,6 +50,62 @@
           <!-- Options injected here -->
         </div>
       </div>
+    </div>
+
+    <!-- Passcode Screen -->
+    <div id="passcodeScreen" class="screen hidden">
+      <div class="header" style="justify-content: flex-start;">
+        <button id="backFromPasscodeBtn" class="nav-btn">🔙 Back</button>
+      </div>
+      <h2 id="passcodeTitle" style="margin-bottom: 20px;">Enter Passcode</h2>
+      <div class="passcode-display" id="passcodeDisplay" style="font-size: 2rem; letter-spacing: 10px; margin-bottom: 30px; font-family: monospace; font-weight: bold; min-height: 40px;">_ _ _ _</div>
+      <div class="numpad" id="numpad" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px; max-width: 300px;">
+        <button class="num-btn action-btn secondary">1</button>
+        <button class="num-btn action-btn secondary">2</button>
+        <button class="num-btn action-btn secondary">3</button>
+        <button class="num-btn action-btn secondary">4</button>
+        <button class="num-btn action-btn secondary">5</button>
+        <button class="num-btn action-btn secondary">6</button>
+        <button class="num-btn action-btn secondary">7</button>
+        <button class="num-btn action-btn secondary">8</button>
+        <button class="num-btn action-btn secondary">9</button>
+        <button class="num-btn action-btn secondary" style="grid-column: 2;">0</button>
+      </div>
+    </div>
+
+    <!-- Parental Controls Screen -->
+    <div id="parentalScreen" class="screen hidden">
+      <div class="header">
+        <button id="backFromParentalBtn" class="nav-btn">🔙 Home</button>
+        <h2>Parental Controls</h2>
+      </div>
+      <div style="width: 100%; max-width: 500px; display: flex; flex-direction: column; gap: 20px;">
+        <button id="changePasscodeBtn" class="action-btn primary">Change Passcode</button>
+
+        <div style="background: white; border-radius: 15px; padding: 15px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); max-height: 50vh; overflow-y: auto;">
+          <h3>Play Streaks (Sessions)</h3>
+          <table style="width: 100%; border-collapse: collapse; margin-top: 10px; text-align: left;">
+            <thead>
+              <tr style="border-bottom: 2px solid #ddd;">
+                <th style="padding: 8px;">Date</th>
+                <th style="padding: 8px;">Time Spent</th>
+                <th style="padding: 8px;">Score</th>
+              </tr>
+            </thead>
+            <tbody id="streaksTableBody">
+              <!-- Streaks injected here -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- Fact Screen -->
+    <div id="factScreen" class="screen hidden">
+      <h1 class="fact-title">🧠 Did You Know? 🧠</h1>
+      <div class="mascot-large" id="factEmoji" style="font-size: 6rem; animation: bounce 1.5s infinite; margin: 20px 0;">🌍</div>
+      <p class="fact-text" id="factText" style="font-size: 1.5rem; text-align: center; margin-bottom: 30px; font-weight: bold;"></p>
+      <button id="closeFactBtn" class="action-btn primary" style="font-size: 1.5rem;">Wow! Let's Play 🚀</button>
     </div>
 
     <!-- Result Screen -->
