@@ -185,6 +185,18 @@ h1 {
   position: relative;
 }
 
+#previousClueText {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 10px;
+  font-style: italic;
+  min-height: 20px;
+}
+
+#previousClueText.hidden {
+  display: none;
+}
+
 #clueText {
   font-size: 1.5rem;
   font-weight: bold;
@@ -234,6 +246,11 @@ h1 {
   background-color: var(--error-color);
   opacity: 0.5;
   pointer-events: none;
+}
+
+.passcode-display.wrong {
+  animation: shake 0.4s;
+  color: var(--error-color);
 }
 
 .option-btn.correct {

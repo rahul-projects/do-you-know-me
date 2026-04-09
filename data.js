@@ -14,7 +14,7 @@ const gameData = [
         answer: "Apple",
         options: [
           { text: "Apple", emoji: "🍎" },
-          { text: "Banana", emoji: "🍌" },
+          { text: "Orange", emoji: "🍊" },
           { text: "Carrot", emoji: "🥕" },
           { text: "Grapes", emoji: "🍇" }
         ]
@@ -23,14 +23,14 @@ const gameData = [
         id: "q1_2",
         type: "guess",
         clues: [
-          "I am yellow and curved.",
-          "Monkeys love to eat me.",
-          "You have to peel me."
+          "I am yellow and sweet inside.",
+          "I wear a spiky crown.",
+          "I have a prickly outside."
         ],
-        answer: "Banana",
+        answer: "Pineapple",
         options: [
           { text: "Orange", emoji: "🍊" },
-          { text: "Banana", emoji: "🍌" },
+          { text: "Pineapple", emoji: "🍍" },
           { text: "Watermelon", emoji: "🍉" },
           { text: "Lemon", emoji: "🍋" }
         ]
@@ -46,7 +46,7 @@ const gameData = [
         answer: "Carrot",
         options: [
           { text: "Potato", emoji: "🥔" },
-          { text: "Strawberry", emoji: "🍓" },
+          { text: "Cucumber", emoji: "🥒" },
           { text: "Carrot", emoji: "🥕" },
           { text: "Tomato", emoji: "🍅" }
         ]
@@ -55,15 +55,15 @@ const gameData = [
         id: "q1_4",
         type: "guess",
         clues: [
-          "I am sour and yellow.",
-          "You squeeze me to make juice.",
-          "I grow on trees."
+          "I am cold and refreshing.",
+          "I am red on the inside, green outside.",
+          "I have black seeds."
         ],
-        answer: "Lemon",
+        answer: "Watermelon",
         options: [
           { text: "Lemon", emoji: "🍋" },
           { text: "Orange", emoji: "🍊" },
-          { text: "Apple", emoji: "🍎" },
+          { text: "Watermelon", emoji: "🍉" },
           { text: "Pear", emoji: "🍐" }
         ]
       },
@@ -71,9 +71,9 @@ const gameData = [
         id: "q1_5",
         type: "guess",
         clues: [
-          "I look like a green tree.",
-          "I am very healthy.",
-          "You can steam or roast me."
+          "I look like a tiny green tree.",
+          "I am a healthy vegetable.",
+          "I am fun to eat with cheese!"
         ],
         answer: "Broccoli",
         options: [
@@ -101,7 +101,7 @@ const gameData = [
         options: [
           { text: "Cat", emoji: "🐱" },
           { text: "Dog", emoji: "🐶" },
-          { text: "Cow", emoji: "🐮" },
+          { text: "Wolf", emoji: "🐺" },
           { text: "Pig", emoji: "🐷" }
         ]
       },
@@ -115,9 +115,9 @@ const gameData = [
         ],
         answer: "Cat",
         options: [
-          { text: "Mouse", emoji: "🐭" },
+          { text: "Dog", emoji: "🐶" },
           { text: "Cat", emoji: "🐱" },
-          { text: "Horse", emoji: "🐴" },
+          { text: "Mouse", emoji: "🐭" },
           { text: "Rabbit", emoji: "🐰" }
         ]
       },
@@ -125,15 +125,15 @@ const gameData = [
         id: "q2_3",
         type: "guess",
         clues: [
-          "I have black and white stripes.",
-          "I look like a horse.",
-          "I live in Africa."
+          "I live in Australia.",
+          "I hop around on my big back legs.",
+          "I carry my baby in a pouch!"
         ],
-        answer: "Zebra",
+        answer: "Kangaroo",
         options: [
-          { text: "Lion", emoji: "🦁" },
+          { text: "Koala", emoji: "🐨" },
           { text: "Horse", emoji: "🐴" },
-          { text: "Zebra", emoji: "🦓" },
+          { text: "Kangaroo", emoji: "🦘" },
           { text: "Tiger", emoji: "🐅" }
         ]
       },
@@ -141,13 +141,13 @@ const gameData = [
         id: "q2_4",
         type: "guess",
         clues: [
-          "I have a very long neck.",
-          "I eat leaves from tall trees.",
-          "I have spots all over."
+          "I have a very long trunk.",
+          "I have big floppy ears.",
+          "I am the largest land animal."
         ],
-        answer: "Giraffe",
+        answer: "Elephant",
         options: [
-          { text: "Camel", emoji: "🐫" },
+          { text: "Hippo", emoji: "🦛" },
           { text: "Elephant", emoji: "🐘" },
           { text: "Giraffe", emoji: "🦒" },
           { text: "Horse", emoji: "🐴" }
@@ -157,16 +157,16 @@ const gameData = [
         id: "q2_5",
         type: "guess",
         clues: [
-          "I am the king of the jungle.",
-          "I have a big mane.",
-          "I roar very loudly!"
+          "I am a bird but I cannot fly.",
+          "I love to swim in very cold water.",
+          "I waddle when I walk!"
         ],
-        answer: "Lion",
+        answer: "Penguin",
         options: [
-          { text: "Tiger", emoji: "🐅" },
+          { text: "Duck", emoji: "🦆" },
           { text: "Bear", emoji: "🐻" },
-          { text: "Monkey", emoji: "🐒" },
-          { text: "Lion", emoji: "🦁" }
+          { text: "Seal", emoji: "🦭" },
+          { text: "Penguin", emoji: "🐧" }
         ]
       }
     ]
@@ -234,7 +234,7 @@ const gameData = [
         answer: "Boat",
         options: [
           { text: "Car", emoji: "🚗" },
-          { text: "Submarine", emoji: "🛶" },
+          { text: "Canoe", emoji: "🛶" },
           { text: "Boat", emoji: "⛵" },
           { text: "Aeroplane", emoji: "✈️" }
         ]
@@ -249,182 +249,182 @@ const gameData = [
         ],
         answer: "Bicycle",
         options: [
-          { text: "Scooter", emoji: "🛴" },
-          { text: "Bicycle", emoji: "🚲" },
+          { text: "Car", emoji: "🚗" },
           { text: "Motorcycle", emoji: "🏍️" },
-          { text: "Skateboard", emoji: "🛹" }
+          { text: "Train", emoji: "🚂" },
+          { text: "Bicycle", emoji: "🚲" }
         ]
       }
     ]
   },
   {
     id: 4,
-    title: "Level 4: Numbers",
+    title: "Level 4: In the House",
     questions: [
       {
         id: "q4_1",
         type: "guess",
         clues: [
-          "I come after two.",
-          "I have three points like a triangle.",
-          "One, two, ..."
+          "You sleep in me at night.",
+          "I have soft pillows.",
+          "I have a warm blanket."
         ],
-        answer: "Three",
+        answer: "Bed",
         options: [
-          { text: "One", emoji: "1️⃣" },
-          { text: "Three", emoji: "3️⃣" },
-          { text: "Five", emoji: "5️⃣" },
-          { text: "Seven", emoji: "7️⃣" }
+          { text: "Couch", emoji: "🛋️" },
+          { text: "Bed", emoji: "🛏️" },
+          { text: "Chair", emoji: "🪑" },
+          { text: "Table", emoji: "🪟" }
         ]
       },
       {
         id: "q4_2",
         type: "guess",
         clues: [
-          "I am the number of fingers on one hand.",
-          "I come after four.",
-          "Half of ten."
+          "You sit on me to eat dinner.",
+          "I have four legs.",
+          "I go with a table."
         ],
-        answer: "Five",
+        answer: "Chair",
         options: [
-          { text: "Four", emoji: "4️⃣" },
-          { text: "Five", emoji: "5️⃣" },
-          { text: "Ten", emoji: "🔟" },
-          { text: "Two", emoji: "2️⃣" }
+          { text: "Bed", emoji: "🛏️" },
+          { text: "Chair", emoji: "🪑" },
+          { text: "Door", emoji: "🚪" },
+          { text: "Lamp", emoji: "🛋️" }
         ]
       },
       {
         id: "q4_3",
         type: "guess",
         clues: [
-          "I look like a snowman.",
-          "I am two circles on top of each other.",
-          "I come before nine."
+          "I keep your food cold.",
+          "I have ice inside.",
+          "I live in the kitchen."
         ],
-        answer: "Eight",
+        answer: "Fridge",
         options: [
-          { text: "Six", emoji: "6️⃣" },
-          { text: "Zero", emoji: "0️⃣" },
-          { text: "Eight", emoji: "8️⃣" },
-          { text: "Nine", emoji: "9️⃣" }
+          { text: "Oven", emoji: "🍳" },
+          { text: "Fridge", emoji: "🧊" },
+          { text: "Sink", emoji: "🚰" },
+          { text: "Trash Can", emoji: "🗑️" }
         ]
       },
       {
         id: "q4_4",
         type: "guess",
         clues: [
-          "I am the first number of all.",
-          "If you have this many, you have nothing.",
-          "I look like a circle."
+          "You watch cartoons on me.",
+          "I have a screen.",
+          "You use a remote to change my channels."
         ],
-        answer: "Zero",
+        answer: "Television",
         options: [
-          { text: "One", emoji: "1️⃣" },
-          { text: "Ten", emoji: "🔟" },
-          { text: "Zero", emoji: "0️⃣" },
-          { text: "Eight", emoji: "8️⃣" }
+          { text: "Radio", emoji: "📻" },
+          { text: "Computer", emoji: "💻" },
+          { text: "Television", emoji: "📺" },
+          { text: "Phone", emoji: "📱" }
         ]
       },
       {
         id: "q4_5",
         type: "guess",
         clues: [
-          "I am the number of legs a spider has.",
-          "I come after seven.",
-          "Two times four."
+          "I tell you what time it is.",
+          "I have numbers and hands.",
+          "I go tick-tock."
         ],
-        answer: "Eight",
+        answer: "Clock",
         options: [
-          { text: "Six", emoji: "6️⃣" },
-          { text: "Ten", emoji: "🔟" },
-          { text: "Eight", emoji: "8️⃣" },
-          { text: "Seven", emoji: "7️⃣" }
+          { text: "Watch", emoji: "⌚" },
+          { text: "Clock", emoji: "⏰" },
+          { text: "Calendar", emoji: "📅" },
+          { text: "Book", emoji: "📖" }
         ]
       }
     ]
   },
   {
     id: 5,
-    title: "Level 5: In the House",
+    title: "Level 5: Under the Sea",
     questions: [
       {
         id: "q5_1",
         type: "guess",
         clues: [
-          "I keep your food cold.",
-          "You open me to get milk.",
-          "I am big and usually in the kitchen."
+          "I live in the ocean and love to jump.",
+          "I am very smart and playful.",
+          "I am not a fish, I breathe air."
         ],
-        answer: "Refrigerator",
+        answer: "Dolphin",
         options: [
-          { text: "Oven", emoji: "🍳" },
-          { text: "Refrigerator", emoji: "🧊" },
-          { text: "Washing Machine", emoji: "🧺" },
-          { text: "Microwave", emoji: "🍲" }
+          { text: "Fish", emoji: "🐟" },
+          { text: "Shark", emoji: "🦈" },
+          { text: "Dolphin", emoji: "🐬" },
+          { text: "Whale", emoji: "🐋" }
         ]
       },
       {
         id: "q5_2",
         type: "guess",
         clues: [
-          "You watch cartoons on me.",
-          "I have a screen.",
-          "I have a remote control."
+          "I live deep in the sea.",
+          "I have squishy arms with suction cups.",
+          "I have eight legs!"
         ],
-        answer: "Television",
+        answer: "Octopus",
         options: [
-          { text: "Computer", emoji: "💻" },
-          { text: "Radio", emoji: "📻" },
-          { text: "Television", emoji: "📺" },
-          { text: "Book", emoji: "📖" }
+          { text: "Crab", emoji: "🦀" },
+          { text: "Squid", emoji: "🦑" },
+          { text: "Octopus", emoji: "🐙" },
+          { text: "Starfish", emoji: "🌟" }
         ]
       },
       {
         id: "q5_3",
         type: "guess",
         clues: [
-          "You sleep on me.",
-          "I am soft and have pillows.",
-          "You use a blanket with me."
+          "I have a hard shell.",
+          "I like to walk sideways on the beach.",
+          "I have two pinching claws."
         ],
-        answer: "Bed",
+        answer: "Crab",
         options: [
-          { text: "Sofa", emoji: "🛋️" },
-          { text: "Chair", emoji: "🪑" },
-          { text: "Table", emoji: "🪚" },
-          { text: "Bed", emoji: "🛏️" }
+          { text: "Lobster", emoji: "🦞" },
+          { text: "Turtle", emoji: "🐢" },
+          { text: "Octopus", emoji: "🐙" },
+          { text: "Crab", emoji: "🦀" }
         ]
       },
       {
         id: "q5_4",
         type: "guess",
         clues: [
-          "You sit on me in the living room.",
-          "I can fit more than one person.",
-          "I am soft and comfortable."
+          "I am a very big fish.",
+          "I have sharp teeth.",
+          "I have a fin on my back that sticks out of the water."
         ],
-        answer: "Sofa",
+        answer: "Shark",
         options: [
-          { text: "Bed", emoji: "🛏️" },
-          { text: "Chair", emoji: "🪑" },
-          { text: "Sofa", emoji: "🛋️" },
-          { text: "Stool", emoji: "🪑" }
+          { text: "Dolphin", emoji: "🐬" },
+          { text: "Shark", emoji: "🦈" },
+          { text: "Whale", emoji: "🐋" },
+          { text: "Fish", emoji: "🐟" }
         ]
       },
       {
         id: "q5_5",
         type: "guess",
         clues: [
-          "You use me to clean your clothes.",
-          "I spin round and round.",
-          "You put soap in me."
+          "I can swim in the ocean or walk on land.",
+          "I move very slowly.",
+          "I carry my house on my back."
         ],
-        answer: "Washing Machine",
+        answer: "Turtle",
         options: [
-          { text: "Dishwasher", emoji: "🍽️" },
-          { text: "Refrigerator", emoji: "🧊" },
-          { text: "Oven", emoji: "🍳" },
-          { text: "Washing Machine", emoji: "🧺" }
+          { text: "Crab", emoji: "🦀" },
+          { text: "Snail", emoji: "🐌" },
+          { text: "Turtle", emoji: "🐢" },
+          { text: "Frog", emoji: "🐸" }
         ]
       }
     ]
@@ -437,15 +437,15 @@ const gameData = [
         id: "q6_1",
         type: "guess",
         clues: [
-          "You go here to learn.",
-          "You see teachers and friends here.",
-          "You bring a backpack."
+          "You can go down the slide here.",
+          "You can swing high in the sky.",
+          "Kids love to play here."
         ],
-        answer: "School",
+        answer: "Park",
         options: [
-          { text: "Park", emoji: "🏞️" },
           { text: "School", emoji: "🏫" },
-          { text: "Hospital", emoji: "🏥" },
+          { text: "Beach", emoji: "🏖️" },
+          { text: "Park", emoji: "🏞️" },
           { text: "Store", emoji: "🏪" }
         ]
       },
@@ -453,24 +453,24 @@ const gameData = [
         id: "q6_2",
         type: "guess",
         clues: [
-          "There is lots of sand.",
-          "You can swim in the ocean.",
-          "You might find seashells."
+          "There is a lot of sand here.",
+          "You can build sandcastles.",
+          "It is right next to the ocean."
         ],
         answer: "Beach",
         options: [
+          { text: "Desert", emoji: "🏜️" },
           { text: "Mountain", emoji: "⛰️" },
-          { text: "Forest", emoji: "🌲" },
-          { text: "Beach", emoji: "🏖️" },
-          { text: "City", emoji: "🏙️" }
+          { text: "Park", emoji: "🏞️" },
+          { text: "Beach", emoji: "🏖️" }
         ]
       },
       {
         id: "q6_3",
         type: "guess",
         clues: [
-          "You go here to see animals.",
-          "Animals live in enclosures.",
+          "There are many animals to see.",
+          "The animals live in big enclosures.",
           "You might see lions and elephants."
         ],
         answer: "Zoo",
@@ -603,96 +603,10 @@ const gameData = [
   },
   {
     id: 8,
-    title: "Level 8: Yummy Treats",
+    title: "Level 8: Our Body",
     questions: [
       {
         id: "q8_1",
-        type: "guess",
-        clues: [
-          "I am cold and sweet.",
-          "I melt in the sun.",
-          "You lick me from a cone."
-        ],
-        answer: "Ice Cream",
-        options: [
-          { text: "Cake", emoji: "🎂" },
-          { text: "Cookie", emoji: "🍪" },
-          { text: "Ice Cream", emoji: "🍦" },
-          { text: "Candy", emoji: "🍬" }
-        ]
-      },
-      {
-        id: "q8_2",
-        type: "guess",
-        clues: [
-          "I am round and have cheese on top.",
-          "I have tomato sauce.",
-          "You cut me into slices."
-        ],
-        answer: "Pizza",
-        options: [
-          { text: "Burger", emoji: "🍔" },
-          { text: "Hot Dog", emoji: "🌭" },
-          { text: "Taco", emoji: "🌮" },
-          { text: "Pizza", emoji: "🍕" }
-        ]
-      },
-      {
-        id: "q8_3",
-        type: "guess",
-        clues: [
-          "You eat me on your birthday.",
-          "I usually have candles on top.",
-          "You make a wish before blowing them out."
-        ],
-        answer: "Birthday Cake",
-        options: [
-          { text: "Pancakes", emoji: "🥞" },
-          { text: "Donut", emoji: "🍩" },
-          { text: "Birthday Cake", emoji: "🎂" },
-          { text: "Pie", emoji: "🥧" }
-        ]
-      },
-      {
-        id: "q8_4",
-        type: "guess",
-        clues: [
-          "I have a hole in the middle.",
-          "I am fried dough.",
-          "Sometimes I have sprinkles."
-        ],
-        answer: "Donut",
-        options: [
-          { text: "Bagel", emoji: "🥯" },
-          { text: "Cookie", emoji: "🍪" },
-          { text: "Donut", emoji: "🍩" },
-          { text: "Croissant", emoji: "🥐" }
-        ]
-      },
-      {
-        id: "q8_5",
-        type: "guess",
-        clues: [
-          "I am cold and refreshing.",
-          "I am red on the inside, green outside.",
-          "I have black seeds."
-        ],
-        answer: "Watermelon",
-        options: [
-          { text: "Apple", emoji: "🍎" },
-          { text: "Strawberry", emoji: "🍓" },
-          { text: "Watermelon", emoji: "🍉" },
-          { text: "Cherry", emoji: "🍒" }
-        ]
-      }
-    ]
-  },
-  {
-    id: 9,
-    title: "Level 9: Our Body",
-    questions: [
-      {
-        id: "q9_1",
         type: "guess",
         clues: [
           "You have two of these to see.",
@@ -708,7 +622,7 @@ const gameData = [
         ]
       },
       {
-        id: "q9_2",
+        id: "q8_2",
         type: "guess",
         clues: [
           "You use me to smell flowers.",
@@ -724,7 +638,7 @@ const gameData = [
         ]
       },
       {
-        id: "q9_3",
+        id: "q8_3",
         type: "guess",
         clues: [
           "You use me to walk and run.",
@@ -740,7 +654,7 @@ const gameData = [
         ]
       },
       {
-        id: "q9_4",
+        id: "q8_4",
         type: "guess",
         clues: [
           "You use me to listen to music.",
@@ -756,7 +670,7 @@ const gameData = [
         ]
       },
       {
-        id: "q9_5",
+        id: "q8_5",
         type: "guess",
         clues: [
           "You use me to hold things.",
@@ -774,87 +688,345 @@ const gameData = [
     ]
   },
   {
+    id: 9,
+    title: "Level 9: Community Helpers",
+    questions: [
+      {
+        id: "q9_1",
+        type: "guess",
+        clues: [
+          "I work in a hospital or clinic.",
+          "I use a stethoscope to listen to your heart.",
+          "I help you feel better when you are sick."
+        ],
+        answer: "Doctor",
+        options: [
+          { text: "Teacher", emoji: "🧑‍🏫" },
+          { text: "Firefighter", emoji: "🚒" },
+          { text: "Doctor", emoji: "🩺" },
+          { text: "Police Officer", emoji: "🚓" }
+        ]
+      },
+      {
+        id: "q9_2",
+        type: "guess",
+        clues: [
+          "I wear a big helmet and heavy boots.",
+          "I drive a big red truck with a loud siren.",
+          "I use a hose to put out fires."
+        ],
+        answer: "Firefighter",
+        options: [
+          { text: "Firefighter", emoji: "🚒" },
+          { text: "Chef", emoji: "🧑‍🍳" },
+          { text: "Pilot", emoji: "✈️" },
+          { text: "Farmer", emoji: "🧑‍🌾" }
+        ]
+      },
+      {
+        id: "q9_3",
+        type: "guess",
+        clues: [
+          "I work in a school classroom.",
+          "I help you learn how to read and write.",
+          "I have a blackboard or a smartboard."
+        ],
+        answer: "Teacher",
+        options: [
+          { text: "Doctor", emoji: "🩺" },
+          { text: "Teacher", emoji: "🧑‍🏫" },
+          { text: "Police Officer", emoji: "🚓" },
+          { text: "Astronaut", emoji: "🧑‍🚀" }
+        ]
+      },
+      {
+        id: "q9_4",
+        type: "guess",
+        clues: [
+          "I wear a uniform and a badge.",
+          "I drive a car with flashing blue and red lights.",
+          "I help keep the city safe."
+        ],
+        answer: "Police Officer",
+        options: [
+          { text: "Builder", emoji: "👷" },
+          { text: "Firefighter", emoji: "🚒" },
+          { text: "Police Officer", emoji: "🚓" },
+          { text: "Mail Carrier", emoji: "✉️" }
+        ]
+      },
+      {
+        id: "q9_5",
+        type: "guess",
+        clues: [
+          "I work in a kitchen or a restaurant.",
+          "I wear a tall white hat.",
+          "I cook yummy food for people to eat!"
+        ],
+        answer: "Chef",
+        options: [
+          { text: "Doctor", emoji: "🩺" },
+          { text: "Chef", emoji: "🧑‍🍳" },
+          { text: "Teacher", emoji: "🧑‍🏫" },
+          { text: "Pilot", emoji: "✈️" }
+        ]
+      }
+    ]
+  },
+  {
     id: 10,
-    title: "Level 10: Mixed Challenge",
+    title: "Level 10: Famous India",
     questions: [
       {
         id: "q10_1",
         type: "guess",
         clues: [
-          "I shine bright in the night sky.",
-          "I am big and round.",
-          "Astronauts have walked on me."
+          "I am a very famous building in India.",
+          "I am made of beautiful white marble.",
+          "An emperor built me for his wife out of love."
         ],
-        answer: "Moon",
+        answer: "Taj Mahal",
         options: [
-          { text: "Sun", emoji: "☀️" },
-          { text: "Earth", emoji: "🌍" },
-          { text: "Cloud", emoji: "☁️" },
-          { text: "Moon", emoji: "🌕" }
+          { text: "Castle", emoji: "🏰" },
+          { text: "Taj Mahal", emoji: "🕌" },
+          { text: "Pyramid", emoji: "🏜️" },
+          { text: "Statue", emoji: "🗽" }
         ]
       },
       {
         id: "q10_2",
         type: "guess",
         clues: [
-          "I am very tall.",
-          "I have leaves.",
-          "Birds build nests in me."
+          "I am known as the 'Father of the Nation'.",
+          "I always wore round glasses and carried a walking stick.",
+          "I helped India get freedom using peace."
         ],
-        answer: "Tree",
+        answer: "Mahatma Gandhi",
         options: [
-          { text: "Flower", emoji: "🌻" },
-          { text: "Tree", emoji: "🌳" },
-          { text: "Grass", emoji: "🌿" },
-          { text: "Bush", emoji: "🪴" }
+          { text: "Scientist", emoji: "🧑‍🔬" },
+          { text: "Mahatma Gandhi", emoji: "👓" },
+          { text: "King", emoji: "👑" },
+          { text: "Teacher", emoji: "🧑‍🏫" }
         ]
       },
       {
         id: "q10_3",
         type: "guess",
         clues: [
-          "You open me when it rains.",
-          "I keep you dry.",
-          "I look like a little roof you carry."
+          "People love to call me the 'Missile Man'.",
+          "I loved teaching children and dreaming big.",
+          "I was the 11th President of India!"
         ],
-        answer: "Umbrella",
+        answer: "A.P.J. Abdul Kalam",
         options: [
-          { text: "Hat", emoji: "🧢" },
-          { text: "Coat", emoji: "🧥" },
-          { text: "Umbrella", emoji: "☂️" },
-          { text: "Boots", emoji: "👢" }
+          { text: "Singer", emoji: "🎤" },
+          { text: "Astronaut", emoji: "🧑‍🚀" },
+          { text: "A.P.J. Abdul Kalam", emoji: "🚀" },
+          { text: "Doctor", emoji: "🧑‍⚕️" }
         ]
       },
       {
         id: "q10_4",
         type: "guess",
         clues: [
-          "I fall from clouds in the winter.",
-          "I am white and cold.",
-          "Every flake of me is unique."
+          "I am known as the 'God of Cricket' in India.",
+          "I hit many, many centuries!",
+          "I wore jersey number 10 for Team India."
         ],
-        answer: "Snow",
+        answer: "Sachin Tendulkar",
         options: [
-          { text: "Rain", emoji: "🌧️" },
-          { text: "Snow", emoji: "❄️" },
-          { text: "Wind", emoji: "💨" },
-          { text: "Ice", emoji: "🧊" }
+          { text: "Soccer Player", emoji: "⚽" },
+          { text: "Tennis Player", emoji: "🎾" },
+          { text: "Sachin Tendulkar", emoji: "🏏" },
+          { text: "Swimmer", emoji: "🏊" }
         ]
       },
       {
         id: "q10_5",
         type: "guess",
         clues: [
-          "I am an instrument with black and white keys.",
-          "You play me with your fingers.",
-          "I am very heavy."
+          "I am a very big, historical fort located in Delhi.",
+          "As my name says, I am made of red stone!",
+          "The Prime Minister hoists the flag here on Independence Day."
         ],
-        answer: "Piano",
+        answer: "Red Fort",
         options: [
-          { text: "Guitar", emoji: "🎸" },
-          { text: "Drum", emoji: "🥁" },
-          { text: "Violin", emoji: "🎻" },
-          { text: "Piano", emoji: "🎹" }
+          { text: "Red Fort", emoji: "🏰" },
+          { text: "Taj Mahal", emoji: "🕌" },
+          { text: "Office", emoji: "🏢" },
+          { text: "House", emoji: "🏠" }
+        ]
+      }
+    ]
+  },
+  {
+    id: 11,
+    title: "Level 11: India Trivia",
+    questions: [
+      {
+        id: "q11_1",
+        type: "guess",
+        clues: [
+          "I am a very busy city.",
+          "The Prime Minister of India lives here.",
+          "I am the capital of India!"
+        ],
+        answer: "New Delhi",
+        options: [
+          { text: "Mumbai", emoji: "🏙️" },
+          { text: "New Delhi", emoji: "🏛️" },
+          { text: "Chennai", emoji: "🏖️" },
+          { text: "Kolkata", emoji: "🌉" }
+        ]
+      },
+      {
+        id: "q11_2",
+        type: "guess",
+        clues: [
+          "I am a big, wild cat.",
+          "I have orange fur with black stripes.",
+          "I am the national animal of India."
+        ],
+        answer: "Tiger",
+        options: [
+          { text: "Lion", emoji: "🦁" },
+          { text: "Tiger", emoji: "🐅" },
+          { text: "Elephant", emoji: "🐘" },
+          { text: "Bear", emoji: "🐻" }
+        ]
+      },
+      {
+        id: "q11_3",
+        type: "guess",
+        clues: [
+          "I am a beautiful bird.",
+          "I dance when it rains.",
+          "I have colorful blue and green feathers and I am India's national bird."
+        ],
+        answer: "Peacock",
+        options: [
+          { text: "Parrot", emoji: "🦜" },
+          { text: "Pigeon", emoji: "🐦" },
+          { text: "Eagle", emoji: "🦅" },
+          { text: "Peacock", emoji: "🦚" }
+        ]
+      },
+      {
+        id: "q11_4",
+        type: "guess",
+        clues: [
+          "I am a beautiful pink or white flower.",
+          "I grow floating on top of the water.",
+          "I am the national flower of India."
+        ],
+        answer: "Lotus",
+        options: [
+          { text: "Rose", emoji: "🌹" },
+          { text: "Sunflower", emoji: "🌻" },
+          { text: "Lotus", emoji: "🪷" },
+          { text: "Tulip", emoji: "🌷" }
+        ]
+      },
+      {
+        id: "q11_5",
+        type: "guess",
+        clues: [
+          "I am very sweet and juicy.",
+          "I am yellow or orange inside.",
+          "I am the national fruit of India and everyone loves me in summer!"
+        ],
+        answer: "Mango",
+        options: [
+          { text: "Apple", emoji: "🍎" },
+          { text: "Mango", emoji: "🥭" },
+          { text: "Banana", emoji: "🍌" },
+          { text: "Grapes", emoji: "🍇" }
+        ]
+      }
+    ]
+  },
+  {
+    id: 12,
+    title: "Level 12: Seasons & Nature",
+    questions: [
+      {
+        id: "q12_1",
+        type: "guess",
+        clues: [
+          "I fall from dark grey clouds.",
+          "I make the plants grow and turn green.",
+          "You need an umbrella to stay dry from me."
+        ],
+        answer: "Rain",
+        options: [
+          { text: "Snow", emoji: "❄️" },
+          { text: "Sun", emoji: "☀️" },
+          { text: "Rain", emoji: "🌧️" },
+          { text: "Wind", emoji: "💨" }
+        ]
+      },
+      {
+        id: "q12_2",
+        type: "guess",
+        clues: [
+          "I appear in the sky after it rains.",
+          "I am very colorful and beautiful.",
+          "I have seven colors!"
+        ],
+        answer: "Rainbow",
+        options: [
+          { text: "Cloud", emoji: "☁️" },
+          { text: "Rainbow", emoji: "🌈" },
+          { text: "Moon", emoji: "🌙" },
+          { text: "Star", emoji: "⭐" }
+        ]
+      },
+      {
+        id: "q12_3",
+        type: "guess",
+        clues: [
+          "I am a season that is very cold.",
+          "You have to wear heavy coats and sweaters.",
+          "Sometimes snow falls during this time."
+        ],
+        answer: "Winter",
+        options: [
+          { text: "Summer", emoji: "☀️" },
+          { text: "Winter", emoji: "❄️" },
+          { text: "Rain", emoji: "🌧️" },
+          { text: "Spring", emoji: "🌸" }
+        ]
+      },
+      {
+        id: "q12_4",
+        type: "guess",
+        clues: [
+          "I am the hottest season of the year.",
+          "Kids have long school holidays during this time.",
+          "You eat a lot of ice cream to stay cool!"
+        ],
+        answer: "Summer",
+        options: [
+          { text: "Winter", emoji: "❄️" },
+          { text: "Summer", emoji: "☀️" },
+          { text: "Rain", emoji: "🌧️" },
+          { text: "Autumn", emoji: "🍂" }
+        ]
+      },
+      {
+        id: "q12_5",
+        type: "guess",
+        clues: [
+          "I start as a tiny caterpillar.",
+          "I have big, colorful wings.",
+          "I love to fly from flower to flower."
+        ],
+        answer: "Butterfly",
+        options: [
+          { text: "Bee", emoji: "🐝" },
+          { text: "Bird", emoji: "🐦" },
+          { text: "Spider", emoji: "🕷️" },
+          { text: "Butterfly", emoji: "🦋" }
         ]
       }
     ]
